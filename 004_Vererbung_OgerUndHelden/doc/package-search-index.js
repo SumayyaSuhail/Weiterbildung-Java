@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"de.ogergames.figuren"},{"l":"de.ogergames.figuren.helden"},{"l":"de.ogergames.kaempfen"},{"l":"test"}];updateSearchResults();
