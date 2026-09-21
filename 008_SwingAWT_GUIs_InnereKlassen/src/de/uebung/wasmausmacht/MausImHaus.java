@@ -31,7 +31,7 @@ public class MausImHaus extends JFrame {
 
         verwendenInnerMausListener();
         verwendenLokaleMausListener();
-        verwendenAnonymeMausListener();
+        verwendenLambdaMausListener();
     }
 
     /**
@@ -49,11 +49,14 @@ public class MausImHaus extends JFrame {
         addMouseWheelListener(new LokaleMausHandler());
     }
 
-//    /** Tried and Failed */
-//    private void verwendenLambdaMausListener(){
+    private int moved = 0;
+    /** Tried and Failed
+     * Add attributes outside the method to invoke in lambda
+     */
+    private void verwendenLambdaMausListener(){
 //        int moved = 0;
-//        addMouseWheelListener(event -> mausWheelListener.setText("Mouse Wheel Moved : " + moved++));
-//    }
+        addMouseWheelListener(event -> mausWheelListener.setText("Mouse Wheel Moved : " + moved++));
+    }
 
     /**
      * Anonymous Class that implements MouseMotionListener
