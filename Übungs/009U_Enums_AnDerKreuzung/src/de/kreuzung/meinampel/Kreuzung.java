@@ -1,5 +1,7 @@
 package de.kreuzung.meinampel;
 
+import de.kreuzung.meinampel.farben.AmpelMitKreis;
+
 import java.util.Random;
 
 /**
@@ -12,6 +14,7 @@ public class Kreuzung {
         int phaseIndex = wuerfel.nextInt(0,4);
 
         Ampel meinAmpel = new Ampel(phaseArray[phaseIndex]);
+
         for (int i = 0; i < 5; i++) {
             meinAmpel.umschalten();
             System.out.println(meinAmpel);
