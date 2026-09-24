@@ -24,14 +24,32 @@ import java.util.Random;
  *     Superman cast2 = (Superman) fliegerReferenz;
  *     Flieger cast3 = (Flieger) objectReferenz;
  *
- *     Es kann nur einen geben!
+ *     PROBLEM: Es kann nur einen geben! Singleton
+ *     Lösung: Singleton Design Pattern
  * </pre>
  */
 public class Superman implements Flieger {
 
+    /** Vorgabe aus Klassendiagramm des Singleton Design Patterns */
+    private static Superman superman;
+
     private int anzahlWeltrettungen;
 
-    private Superman S;
+    /** Vorgabe aus dem Klassendiagramm: private wegen - in Diagramm  */
+    private Superman() {}
+
+    /**
+     * Erstellt beim ersten Mal, wenn diese Methode aufgerufen wird,
+     * das einzige Superman Objekt. Bei jeden weiteren Aufruf wird nur
+     * die Referenz dieses einzigen Superman-Objekts zurückgegeben.
+     * @return Referenz auf den einigen Superman!
+     */
+    public static Superman getInstance() {
+        if (superman == null){
+            superman = new Superman();
+        }
+        return superman;
+    }
 
     /**
      * In einer Telefonzelle zieht sich Superman um und macht sich auf die Welt zu retten.

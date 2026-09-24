@@ -1,7 +1,6 @@
 package com.mymovie.film;
 
 import com.mymovie.flughafen.Flieger;
-import com.mymovie.flughafen.Schwimmer;
 import com.mymovie.flughafen.Tower;
 import com.mymovie.flughafen.Wasserpolizei;
 import com.mymovie.lebewesen.*;
@@ -29,7 +28,7 @@ public class MetropolisAirport {
 
         Spatz jack = new Spatz();
         Flugzeug beluga = new Flugzeug();
-        Superman S = new Superman();
+        Superman S = Superman.getInstance(); //Superman.SUPERMAN;(enum) // new Superman(); (normal)
         Batwing batmansFlieger = new Batwing(S);
 
         try {
