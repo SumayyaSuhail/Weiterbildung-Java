@@ -9,7 +9,7 @@ package de.mygarten.faehigkeit;
 @FunctionalInterface
 public interface Graber {
     /**
-     * Method mit Parameter
+     * Method to grab
      * @param flaecheGroesse wie groß die umzugrabende Fläche ist
      * @return gibt was Forderungen der Graber zurück
      */

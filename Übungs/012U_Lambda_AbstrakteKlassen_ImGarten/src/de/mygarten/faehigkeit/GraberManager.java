@@ -43,7 +43,7 @@ public class GraberManager {
             Scanner scanner = new Scanner(System.in);
             int index = scanner.nextInt();
 
-            Graber graber = grabers.get(index);
+            Graber graber = grabers.get(index-1);
             System.out.println(graber.getClass().getName() + " hat den Auftrag erhalten!");
             graber.graben(10);
             graber.pauseMachen();
