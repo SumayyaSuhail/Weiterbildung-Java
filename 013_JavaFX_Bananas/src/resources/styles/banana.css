@@ -1,0 +1,30 @@
+/*
+    https://www.w3schools.com/css/
+    https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+*/
+.root{
+    -fx-background-color: #FFD90F;
+    -fx-background-color: linear-gradient(to right, red, yellow);
+    -fx-background-image: url("../images/Banana.png");
+    -fx-background-size: cover;
+}
+.label{
+    -fx-text-fill: blue;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#begruessung{
+    -fx-text-fill: green;
+}
+
+.button{
+    -fx-font-size: 14px;
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #FFD90F;
+    -fx-border-radius:80;
+    -fx-background-radius: 80;
+}
+.button:hover{
+    -fx-background-color: gray;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.78), 18, 0.7, 0, 9);
+}
