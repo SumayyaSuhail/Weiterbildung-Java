@@ -6,20 +6,25 @@ import de.tollemarmelade.views.ObstGartenView;
 
 public class ObstGartenController {
 
-    private final MarmeladeApp app;
     private final ObstGartenView view;
+    private ObstBaum aktuellerBaum = ObstBaum.APFEL;
 
-    public ObstGartenController(MarmeladeApp app){
-        this.app = app;
-        view = app.getObstBaumView();
+    public ObstGartenController(ObstGartenView view) {
+        this.view = view;
     }
 
+    /** The tree is displayed based on the tree selected from the Menu **/
     public void aktivieren() {
         for (ObstBaum baum : ObstBaum.values()) {
-            view.getGiessenButton(baum).setOnAction(klick -> {
-                baum.giessen();
-                view.baeumeAnzeigen(baum);
+            view.getMenuItems(baum).setOnAction(klick -> {
+                aktuellerBaum = baum;
+                view.baeumeAnzeigen(aktuellerBaum);
             });
         }
+        view.getGiessenButton().setOnAction(klick -> {
+            aktuellerBaum.giessen();
+            view.baeumeAnzeigen(aktuellerBaum);
+        });
+        view.baeumeAnzeigen(aktuellerBaum);
     }
 }

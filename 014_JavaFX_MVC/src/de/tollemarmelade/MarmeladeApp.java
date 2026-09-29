@@ -33,7 +33,7 @@ public class MarmeladeApp extends Application {
         WillkommenController willkommenController = new WillkommenController(this);
         willkommenController.aktivieren();
 
-        ObstGartenController obstGartenController = new ObstGartenController(this);
+        ObstGartenController obstGartenController = new ObstGartenController(obstBaumView);
         obstGartenController.aktivieren();
 
         MarmeladeController marmeladeController = new MarmeladeController(marmeladeView);
@@ -49,10 +49,6 @@ public class MarmeladeApp extends Application {
 
     public WillkommenView getWillkommenView() {
         return willkommenView;
-    }
-
-    public ObstGartenView getObstBaumView() {
-        return obstBaumView;
     }
 
     /**
