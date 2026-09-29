@@ -1,0 +1,23 @@
+.root{
+    -fx-background-color: #F7EFE3;
+}
+
+#zutatenBereich{
+    -fx-min-width: 150px;
+    -fx-pref-width: 150px;
+    -fx-max-width: 150px;
+}
+
+#etikett{
+     -fx-background-color: #fff8e8;
+     -fx-border-color: #9b6b3d;
+     -fx-border-width: 2;
+     -fx-border-radius: 8;
+     -fx-background-radius: 8;
+     -fx-padding: 10 16;
+     -fx-text-alignment: center;
+     -fx-alignment: center;
+     -fx-font-family: Georgia;
+     -fx-font-size: 14px;
+     -fx-text-fill: #5b3925;
+}
